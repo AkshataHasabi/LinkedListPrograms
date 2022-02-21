@@ -65,6 +65,27 @@ public class MyLinkedList<K> {
 		}
 	}
 	
+	public void search(K x){
+	    INode<K> tempNode = this.head; // Initialize current
+	    boolean condition=false;
+	    if(this.head==null) {
+	    	System.out.println("Linked List is Empty");
+	    }else {
+	    	while ( tempNode!= null) {
+	    		if (tempNode.getKey().equals(x)){	
+	    			condition=true;
+	    			break;
+	    		}
+	    		tempNode =tempNode.getNext();
+	    	}
+	    }
+	    if(condition==true) {
+	    	System.out.println("Node is present");
+	    }else {
+	    	System.out.println("Node is not present");
+	    }  
+	}
+	
 	public void printMyNodes() {
 		StringBuffer myNodes=new StringBuffer("my nodes:");
 		INode<K> tempNode=head;
