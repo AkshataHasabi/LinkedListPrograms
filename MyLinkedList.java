@@ -22,7 +22,29 @@ public class MyLinkedList<K> {
 		}
 	}
 	
+	
+	public void append(INode<K> newNode) {
+		if(this.head==null) {
+			this.head=newNode;
+		}
+		if(this.tail==null) {
+			this.tail=newNode;
+		}else {
+			this.tail.setNext(newNode);
+			this.tail=newNode;
+			
+		}
+	}
+	
 	public void printMyNodes() {
-		System.out.println("My Nodes:"+head);
+		StringBuffer myNodes=new StringBuffer("my nodes:");
+		INode<K> tempNode=head;
+		while(tempNode.getNext()!=null) {
+			myNodes.append(tempNode.getKey());
+			myNodes.append("->");
+			tempNode=tempNode.getNext();
+		}
+		myNodes.append(tempNode.getKey());
+		System.out.println("My Nodes:"+myNodes);
 	}
 }

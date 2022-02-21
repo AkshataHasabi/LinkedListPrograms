@@ -9,9 +9,9 @@ public class Main {
 		 MyNode<Integer> nodeTwo = new MyNode<>(30);
 		 MyNode<Integer> nodeThree = new MyNode<>(70);
 		 
-		 myLinkedList.add(nodeOne);
-		 myLinkedList.add(nodeTwo);
-		 myLinkedList.add(nodeThree);
+		 myLinkedList.append(nodeOne);
+		 myLinkedList.append(nodeTwo);
+		 myLinkedList.append(nodeThree);
 		    
 		 myLinkedList.printMyNodes();
 	}
