@@ -12,8 +12,10 @@ public class Main {
 		 myLinkedList.add(nodeOne);
 		 myLinkedList.append(nodeThree);
 		 myLinkedList.insert(nodeOne, nodeTwo);
-		 
+		 myLinkedList.printMyNodes();
 		 myLinkedList.deleteFirstNode(nodeOne);
+		 myLinkedList.printMyNodes();
+		 myLinkedList.deleteLastNode();
 		 myLinkedList.printMyNodes();
 	}
 }

@@ -49,6 +49,22 @@ public class MyLinkedList<K> {
 		}
 	}
 	
+	public void deleteLastNode() {
+		if(this.head!=null) {
+			if(this.head.getNext()==null) {
+				this.head=null;
+			}else {
+				INode<K> tempNode=this.head;
+				while(tempNode.getNext()!=null) {
+					tempNode=tempNode.getNext();
+					INode<K> lastNode=tempNode.getNext();
+					tempNode.setNext(null);
+					lastNode=null;
+				}
+			}
+		}
+	}
+	
 	public void printMyNodes() {
 		StringBuffer myNodes=new StringBuffer("my nodes:");
 		INode<K> tempNode=head;
