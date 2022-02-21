@@ -9,8 +9,10 @@ public class Main {
 		 MyNode<Integer> nodeTwo = new MyNode<>(30);
 		 MyNode<Integer> nodeThree = new MyNode<>(70);
 		 
-		 nodeOne.setNext(nodeTwo);
-		 nodeTwo.setNext(nodeThree);
-		 System.out.println(nodeOne);
+		 myLinkedList.add(nodeOne);
+		 myLinkedList.add(nodeTwo);
+		 myLinkedList.add(nodeThree);
+		    
+		 myLinkedList.printMyNodes();
 	}
 }
