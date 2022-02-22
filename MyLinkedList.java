@@ -56,7 +56,7 @@ public class MyLinkedList<K> {
 			}else {
 				INode<K> tempNode=this.head;
 				while(tempNode.getNext()!=null) {
-					tempNode=tempNode.getNext();
+					//tempNode=tempNode.getNext();
 					INode<K> lastNode=tempNode.getNext();
 					tempNode.setNext(null);
 					lastNode=null;
@@ -84,6 +84,16 @@ public class MyLinkedList<K> {
 	    }else {
 	    	System.out.println("Node is not present");
 	    }  
+	}
+	
+	public void insertAfter(INode<K> myNode, INode<K> newData) {
+		if(myNode == null) {
+			System.out.println("the given previous node cannot be null");
+		}else {
+		INode<K> newNode=newData;
+		newNode.setNext(myNode.getNext());
+		myNode.setNext(newNode);
+	}
 	}
 	
 	public void printMyNodes() {

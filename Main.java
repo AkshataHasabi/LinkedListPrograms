@@ -8,18 +8,19 @@ public class Main {
 		 MyNode<Integer> nodeOne = new MyNode<>(56);
 		 MyNode<Integer> nodeTwo = new MyNode<>(30);
 		 MyNode<Integer> nodeThree = new MyNode<>(70);
+		 MyNode<Integer> nodeFour = new MyNode<>(40);
 		 
+		 //Adding the node to linked list
 		 myLinkedList.add(nodeOne);
+		 //Appending the node
 		 myLinkedList.append(nodeThree);
+		 // inserting in between the two nodes
 		 myLinkedList.insert(nodeOne, nodeTwo);
 		 myLinkedList.printMyNodes();
-
-		
-		 myLinkedList.deleteLastNode();
+		 //here we searched the node by passing node data
+		 myLinkedList.search(30); 
+		 //here again inserted the node 
+		 myLinkedList.insertAfter(nodeTwo, nodeFour);
 		 myLinkedList.printMyNodes();
-
-		 myLinkedList.search(30);
-
-
 	}
 }
