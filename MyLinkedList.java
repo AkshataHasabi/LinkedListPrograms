@@ -41,6 +41,16 @@ public class MyLinkedList<K> {
 		newNode.setNext(tempNode);
 	}
 	
+	public void insertAfter(INode<K> myNode, INode<K> newData) {
+		if(myNode == null) {
+			System.out.println("the given previous node cannot be null");
+		}else {
+		INode<K> newNode=newData;
+		newNode.setNext(myNode.getNext());
+		myNode.setNext(newNode);
+	}
+	}
+	
 	public void deleteFirstNode(INode<K> head) {
 		if(this.head != null) {
 			INode<K> tempNode = this.head;
@@ -65,6 +75,33 @@ public class MyLinkedList<K> {
 		}
 	}
 	
+	public void deleteNode(INode<K> head, int position) {
+	    if (head != null) {
+	    	INode<K> temp = head;
+	    	if (position != 0) {
+	    		for (int i = 0; temp != null && i < position-1; i++) {
+	    			temp = temp.getNext();
+	    			if (temp == null || temp.getNext() == null) {
+	    						return;
+	    			}else {
+	    				INode<K> next = temp.getNext().getNext();
+	    				temp.setNext(next);
+	    				}
+	   				}
+	   			}
+	   }
+ }
+	
+   public void size() {
+	    INode<K> temp = head;
+        int count = 0;
+        while (temp != null) {
+	         temp = temp.getNext();
+	         count++;
+	        }
+	        System.out.println("Now Total nodes in the linked list are:-"+" "+count);
+	    }
+	
 	public void search(K x){
 	    INode<K> tempNode = this.head; // Initialize current
 	    boolean condition=false;
@@ -84,16 +121,6 @@ public class MyLinkedList<K> {
 	    }else {
 	    	System.out.println("Node is not present");
 	    }  
-	}
-	
-	public void insertAfter(INode<K> myNode, INode<K> newData) {
-		if(myNode == null) {
-			System.out.println("the given previous node cannot be null");
-		}else {
-		INode<K> newNode=newData;
-		newNode.setNext(myNode.getNext());
-		myNode.setNext(newNode);
-	}
 	}
 	
 	public void printMyNodes() {

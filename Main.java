@@ -17,10 +17,15 @@ public class Main {
 		 // inserting in between the two nodes
 		 myLinkedList.insert(nodeOne, nodeTwo);
 		 myLinkedList.printMyNodes();
-		 //here we searched the node by passing node data
-		 myLinkedList.search(30); 
 		 //here again inserted the node 
 		 myLinkedList.insertAfter(nodeTwo, nodeFour);
 		 myLinkedList.printMyNodes();
+		 //here we searched the node by passing node data
+		 myLinkedList.search(40); 
+		 //delete the node 
+		 myLinkedList.deleteNode(nodeOne, 2);
+		 myLinkedList.printMyNodes();
+		 myLinkedList.size();
+		
 	}
 }
